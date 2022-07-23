@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile List</h1>
+    <table>
+        <tr>
+            <th>User id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>DOB</th>
+            <th>Join Date</th>
+            <th>Has Been Working Since</th>
+            <th>Rewards</th>
+        </tr>
+        {% for object in object_list%}
+        <tr>
+            <td>{{object.user.id}}</td>
+            <td>{{object.full_name}}</td>
+            <td>{{object.designation}}</td>
+            <td>{{object.dob}}</td>
+            <td>{{object.join_date}}</td>
+            <td>{{object.working_duration}}</td>
+            <td>{{object.rewards}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report Detail</title>
+</head>
+<body>
+    <h1>{{object.employee}}</h1>
+    <table>
+        
+        <tr>
+            <th> Designation :  </th>
+            <td>{{object.designation}}</td>
+        </tr>
+        <tr>
+            <th>Date : </th>
+            <td>{{object.date}}</td>
+        </tr>
+        <tr>
+            <th>Working Project : </th>
+            <td>{{object.working_project}}</td>
+        </tr>        
+        <tr>
+            <th>Performed Task Today   : </th>
+            <td>{{object.performedTask_today}}</td>
+        </tr>
+        <tr>
+            <th>Performed Task Next Day : </th>
+            <td>{{object.performedTask_next_day}}</td>
+        </tr>
+    </table>
+</body>
+</html>

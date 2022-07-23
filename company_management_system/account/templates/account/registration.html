@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method = "post">
+        {% csrf_token %}
+       User : <input type="number" value="{{user.id}}" name = 'user_id'><br>
+       Full Name : <input type="text" name="full_name"><br>
+       Designation : <input type="text" name="designation"><br>
+       Join Date : <input type="date" name="join_date"><br>
+       DOB : <input type="date" name="dob"><br>
+       Working : <input type="text" name="working_duration"><br>
+       Rewards : <input type="text" name="rewards"><br>
+       Category : <select name="category">
+                        <option value="developer">Developer</option>
+                        <option value="HR">HR</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Marketing Person">Marketing Person</option>
+                    </select><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

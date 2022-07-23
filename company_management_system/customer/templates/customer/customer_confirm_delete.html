@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>confirm page</title>
+   </head>
+   <body>
+      <form method="post">{% csrf_token %}
+         <p>Are you sure you want to delete "{{ object }}" information ?</p>
+         <input type="submit" value="Confirm"><button><a href="{%url 'customer-list'%}">Cancel</a></button>
+      </form>
+   </body>
+</html>

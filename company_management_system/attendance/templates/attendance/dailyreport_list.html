@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance List</title>
+</head>
+<body>
+    <h1>Attendance List</h1>
+    <table>
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>Date</th>
+            <th>Working Project</th>
+            <th>Task Performed Today</th>
+            <th>Task will be Performed Next Day</th>
+           
+        </tr>
+        {% for object in object_list%}
+        <tr>
+            <td>{{object.employee.user.id}}</td>
+            <td>{{object.employee}}</td>
+            <td>{{object.designation}}</td>
+            <td>{{object.date}}</td>
+            <td>{{object.working_project}}</td>
+            <td>{{object.performedTask_today}}</td>
+            <td>{{object.performedTask_next_day}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

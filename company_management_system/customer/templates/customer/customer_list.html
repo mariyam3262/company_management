@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutomer List </title>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <table>
+        <tr>
+            <th>Owner Name</th>
+            <th>Company Name</th>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Contact Number</th>
+            <th>Alternate Contact</th>
+            <th>Address</th>
+            <th>Attechments</th>
+        </tr>
+        {% for object in object_list%}
+            <tr>
+                <td>{{object.owner_name}}</td>
+                <td>{{object.company_name}}</td>
+                <td>{{object.project}}</td>
+                <td>{{object.description}}</td>
+                <td>{{object.contact_number}}</td>          
+                <td>{{object.alt_contact_num}}</td>
+                <td>{{object.address}}</td>
+                
+                <td>{{object.requirement_pdf}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

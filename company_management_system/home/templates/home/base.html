@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #flex-head{
+            display: flex;            
+        }
+        #flex-head div.head-img{
+            flex-basis:20%;
+            border:1px solid red;
+        }
+        #flex-head div.head-head{
+            flex-basis:80%;
+            border:1px solid black;
+            padding: auto auto;
+            margin-left: 10px;
+        }
+        #flex-nav{
+            display:flex;
+            border: 1px solid red;
+            margin-left:40%;
+            
+        }        
+        #flex-nav div.item{
+            border: 1px solid black; 
+            flex-basis: 20%;
+        }
+        #flex-sub{
+            display:flex;
+            
+        }
+        #flex-sub div.flex-nav{
+            flex-basis: 30%;
+
+        }
+        #flex-sub div.flex-content{
+            flex-basis:80%;
+            margin-left: 20px;
+
+        }
+        #foot{
+            display: flex;
+            flex-basis:100%;
+            border: 1px solid black;
+        }
+       
+    </style>
+   
+</head>
+<body>
+    <div id="flex-head">
+        <div class="head-img"><img src="#" alt="this is image"></div>
+        <div class="head-head"><h1>This is Name of Company</h1></div>
+    </div>
+    <div id= "flex-nav">
+        
+            <div class="item">Project  </div>
+            <div class="item">Employee </div>
+            <div class="item">Customer </div>
+       
+    </div>
+    <div id="flex-sub">
+        <div class="felx-nav"> sub- nevigation </div>
+        <div class= "flex-content">{%block content%}{%endblock%}</div>
+    </div>
+   
+    <div id = "foot">footer </div>
+</body>
+</html>

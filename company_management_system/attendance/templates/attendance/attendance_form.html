@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Attendance</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">
+           {% csrf_token %}
+        <div>
+            <p>{{form.user.errors}}</p>
+            <label for="{{form.user.id_for_label}}">Name</label>
+            {{form.user}}
+        </div>
+        <div>
+            <p>{{form.date.errors}}</p>
+            <label for="{{form.date.id_for_label}}">Date</label>
+            {{form.date}}
+        </div>
+        <div>
+            <p>{{form.reporting_time.errors}}</p>
+            <label for="{{form.reporting_time.id_for_label}}">Reporting Time</label>
+            {{form.reporting_time}}
+        </div>
+        <div>
+            <p>{{form.total_attendance.errors}}</p>
+            <label for="{{form.total_attendance.id_for_label}}">Total Attendance</label>
+            {{form.total_attendance}}
+        </div>
+        <div>
+            <p>{{form.leaving_time.errors}}</p>
+            <label for="{{form.leaving_time.id_for_label}}">Leaving Time</label>
+            {{form.leaving_time}}
+        </div>
+       
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

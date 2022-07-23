@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+</head>
+<body>
+    <h1>Project List</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Start_date</th>
+            <th>Tentative deploy date</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Paid Amount</th>
+            <th>Remaining work</th>
+            <th>Customer Id</th>
+            <th>Project Manager</th>
+        </tr>
+        {%for object in object_list%}
+        <tr>
+            <td>{{object.project_name}}</td>
+            <td>{{object.start_date}}</td>
+            <td>{{object.deploy_date}}</td>
+            <td>{{object.status}}</td>
+            <td>{{object.amount}}</td>
+            <td>{{object.paid_amount}}</td>
+            <td>{{object.remainig_work}}</td>
+            <td>{{object.customerid}}</td>
+            <td>{{object.project_manager}}</td>
+
+        </tr>
+        {%endfor%}
+    </table>
+    
+</body>
+</html>

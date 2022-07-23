@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">
+           {% csrf_token %}
+        <div>
+            <p>{{form.project_name.errors}}</p>
+            <label for="{{form.project_name.id_for_label}}">Project Name</label>
+            {{form.project_name}}
+        </div>
+        <div>
+            <p>{{form.status.errors}}</p>
+            <label for="{{form.status.id_for_label}}">Status</label>
+            {{form.status}}
+        </div>
+        <div>
+            <p>{{form.amount.errors}}</p>
+            <label for="{{form.amount.id_for_label}}">Amount</label>
+            {{form.amount}}
+        </div>
+        <div>
+            <p>{{form.paid_amount.errors}}</p>
+            <label for="{{form.paid_amount.id_for_label}}">Paid amount</label>
+            {{form.paid_amount}}
+        </div>
+        <div>
+            <p>{{form.remainig_work.errors}}</p>
+            <label for="{{form.remainig_work.id_for_label}}">Remainig work</label>
+            {{form.remainig_work}}
+        </div>
+        <div>
+            <p>{{form.customerid.errors}}</p>
+            <label for="{{form.customerid.id_for_label}}">Customer</label>
+            {{form.customerid}}
+        </div>
+        <div>
+            <p>{{form.project_manager.errors}}</p>
+            <label for="{{form.project_manager.id_for_label}}">Project Manager</label>
+            {{form.project_manager}}
+        </div>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

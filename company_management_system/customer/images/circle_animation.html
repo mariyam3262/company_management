@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <body>
+<canvas id="myCanvas" width='300px' height='300px'/>
+<script type='text/javascript'>
+var canvas= document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+var radius = 70;
+var cx=cy=150;
+ctx.lineWidth = 10;
+ctx.strokeStyle="blue";
+var angle = 0;
+var newAngle=0;
+function drawCircle() 
+{
+ctx.clearRect(0,0,canvas.width, canvas.height);
+ctx.beginPath();
+ctx.arc(cx, cy, radius, 0, newAngle * Math.PI);
+ctx.stroke();
+};
+ 
+function go()
+{ 
+ // Sincle Maximum angle is 2*PI, we use 2 for 200 divisions
+if (angle < 200) 
+{
+angle = angle + 1;
+newAngle = angle *.01;
+requestAnimationFrame(drawCircle);
+} }
+requestAnimationFrame(drawCircle);
+setInterval(go, 1000/60);
+</script>
+ </body>
+</html>

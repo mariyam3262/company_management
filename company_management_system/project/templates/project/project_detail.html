@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Detail</title>
+</head>
+<body>
+    <h1>{{object.customerid}}</h1>
+    <table>
+        <tr>
+            <th>Project Title : </th>
+            <td>{{object.project_name}}</td>
+        </tr>
+        <tr>
+            <th>Start date  : </th>
+            <td>{{object.start_date}}</td>
+        </tr>
+        <tr>
+            <th>Deploy Date: </th>
+            <td>{{object.deploy_date}}</td>
+        </tr>
+        <tr>
+            <th>Status : </th>
+            <td>{{object.status}}</td>
+        </tr>
+        <tr>
+            <th>Amount : </th>
+            <td>{{object.amount}}</td>
+        </tr>
+        <tr>
+            <th>Paid Amount : </th>
+            <td>{{object.paid_amount}}</td>
+        </tr>
+        <tr>
+            <th>Remaining work</th>
+            <td>{{object.remainig_work}}</td>
+        </tr>
+        <tr>
+            <th>Project Manager : </th>
+            <td>{{object.project_manager}}</td>
+        </tr>
+    </table>
+</body>
+</html>

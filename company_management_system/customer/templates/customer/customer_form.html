@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">
+           {% csrf_token %}
+        <div>
+            <p>{{form.owner_name.errors}}</p>
+            <label for="{{form.owner_name.id_for_label}}">Owner Name</label>
+            {{form.owner_name}}
+        </div>
+        <div>
+            <p>{{form.company_name.errors}}</p>
+            <label for="{{form.company_name.id_for_label}}">Company Name</label>
+            {{form.company_name}}
+        </div>
+        <div>
+            <p>{{form.contact_number.errors}}</p>
+            <label for="{{form.contact_number.id_for_label}}">Contact</label>
+            {{form.contact_number}}
+        </div>
+        <div>
+            <p>{{form.alt_contact_num.errors}}</p>
+            <label for="{{form.alt_contact_num.id_for_label}}">Alternate Contact</label>
+            {{form.alt_contact_num}}
+        </div>
+        <div>
+            <p>{{form.address.errors}}</p>
+            <label for="{{form.address.id_for_label}}">Address</label>
+            {{form.address}}
+        </div>
+        <div>
+            <p>{{form.project_category.errors}}</p>
+            <label for="{{form.project_category.id_for_label}}">Project Category</label>
+            {{form.project_category}}
+        </div>
+        <div>
+            <p>{{form.project.errors}}</p>
+            <label for="{{form.project.id_for_label}}">Project</label>
+            {{form.project}}
+        </div>
+        <div>
+            <p>{{form.description.errors}}</p>
+            <label for="{{form.description.id_for_label}}">Description</label>
+            {{form.description}}
+        </div>
+        <div>
+            <p>{{form.requirement_pdf.errors}}</p>
+            <label for="{{form.requirement_pdf.id_for_label}}">Attechments</label>
+            {{form.requirement_pdf}}
+        </div>
+        <div>
+            <p>{{form.reference.errors}}</p>
+            <label for="{{form.reference.id_for_label}}">Reference</label>
+            {{form.reference}}
+        </div>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
