@@ -21,7 +21,7 @@ class Profile(models.Model):
     dob = models.DateField()
     working_duration = models.CharField(max_length=20)
     rewards = models.CharField(max_length= 500)
-    # category = models.CharField(max_length= 50, choices=category, default='Developer')
+    category = models.CharField(max_length= 50, choices=category, default='Developer')
 
     def __str__(self):
         return f"{self.full_name}"
