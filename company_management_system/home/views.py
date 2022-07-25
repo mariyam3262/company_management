@@ -10,4 +10,5 @@ class HomePage(View):
 class Dashboard(View):
     
     def get(self, request):
+        pass
         
